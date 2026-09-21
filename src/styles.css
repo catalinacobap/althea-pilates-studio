@@ -228,8 +228,8 @@ footer { padding: 80px clamp(22px, 7vw, 118px) 34px; background: var(--olive); c
 
 @media (max-width: 760px) {
   html { scroll-padding-top: 116px; }
-  .site-header { min-height: 92px; padding: 20px 22px 24px; }
-  .site-header.is-scrolled { top: 12px; min-height: 68px; padding: 9px 16px; gap: 28px; max-width: calc(100% - 24px); }
+  .site-header { min-height: 92px; padding: 20px 22px 24px; transition: width .7s ease, background .7s ease, border-radius .7s ease, border-color .7s ease, box-shadow .7s ease, top .7s ease, padding .7s ease, min-height .7s ease, gap .7s ease; }
+  .site-header.is-scrolled { top: 12px; width: 156px; min-height: 68px; padding: 9px 16px; gap: 28px; max-width: calc(100% - 24px); animation: none; }
   .site-header.is-scrolled nav { border: 1px solid var(--line); border-radius: 24px; }
   .brand { width: 110px; }
   .desktop-book { display: none; }
