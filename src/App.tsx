@@ -84,7 +84,7 @@ function App() {
             ['Inicio', '#inicio'], ['El estudio', '#estudio'], ['Pilates', '#pilates'],
             ['Horarios', '#horarios'], ['Ubicación', '#ubicacion'], ['Contacto', '#contacto'],
           ].map(([label, href]) => <a key={href} href={href} onClick={closeMenu}>{label}</a>)}
-          <a className="button button-primary nav-book" href={BOOKING_URL} target="_blank" rel="noreferrer">Agendar <ArrowIcon /></a>
+          <a className="button button-outline nav-whatsapp" href={WHATSAPP_URL} target="_blank" rel="noreferrer" onClick={closeMenu}><SocialIcon type="whatsapp" /> WhatsApp</a>
         </nav>
         <a className="button button-primary desktop-book" href={BOOKING_URL} target="_blank" rel="noreferrer">Agendar <ArrowIcon /></a>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}><MenuIcon open={menuOpen} /></button>
@@ -250,10 +250,6 @@ function App() {
         </div>
       </footer>
 
-      <div className="mobile-cta" aria-label="Acciones rápidas">
-        <a className="button button-primary" href={BOOKING_URL} target="_blank" rel="noreferrer">Agendar</a>
-        <a className="whatsapp-mini" href={WHATSAPP_URL} target="_blank" rel="noreferrer" aria-label="Escribir por WhatsApp"><SocialIcon type="whatsapp" /></a>
-      </div>
     </div>
   )
 }

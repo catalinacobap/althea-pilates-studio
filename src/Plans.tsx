@@ -47,7 +47,7 @@ export default function Plans({ bookingUrl }: { bookingUrl: string }) {
           {plan.reservations !== undefined && <div><dt>Reservaciones</dt><dd>{plan.reservations}</dd></div>}
           {plan.daily !== undefined && <div><dt>Reservaciones por día</dt><dd>{plan.daily}</dd></div>}
         </dl>
-        {plan.description && <details className="plan-description"><summary>Conocer el plan</summary><p>{plan.description}</p></details>}
+        {plan.description && <details className="plan-description"><summary>Conocer el plan</summary><p>{plan.description.split(/([🌟✨🍃])/u).map((part, index) => /[🌟✨🍃]/u.test(part) ? <span className="plan-emoji" key={index}>{part}</span> : part)}</p></details>}
         <a className="button button-outline" href={bookingUrl} target="_blank" rel="noreferrer" aria-label="Agendar en la plataforma de Althea">Agendar <span aria-hidden="true">↗</span></a>
       </article>)}
     </div>
