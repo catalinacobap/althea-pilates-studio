@@ -48,8 +48,8 @@ export default function Plans({ bookingUrl }: { bookingUrl: string }) {
           {plan.daily !== undefined && <div><dt>Reservaciones por día</dt><dd>{plan.daily}</dd></div>}
         </dl>
         {plan.description && <details className="plan-description"><summary>Conocer el plan</summary><p>{plan.description.split(/([🌟✨🍃])/u).map((part, index) => /[🌟✨🍃]/u.test(part) ? <span className="plan-emoji" key={index}>{part}</span> : part)}</p></details>}
-        <a className="button button-outline" href={bookingUrl} target="_blank" rel="noreferrer" aria-label="Agendar en la plataforma de Althea">Agendar <span aria-hidden="true">↗</span></a>
       </article>)}
     </div>
+    <a className="button button-outline plans-cta" href={bookingUrl} target="_blank" rel="noreferrer">Agendar <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M4 10h11M11 5l5 5-5 5" /></svg></a>
   </section>
 }
