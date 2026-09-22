@@ -1,6 +1,6 @@
-# Althea Pilates Studio
+# Estudio demo
 
-Landing page responsive para Althea Pilates Studio, Ciudad Quesada, Costa Rica.
+Landing page responsive con identidad y contenido ficticios. Los enlaces son internos y no realizan reservas ni contactan negocios reales.
 
 ## Desarrollo
 
